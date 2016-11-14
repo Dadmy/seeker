@@ -4,46 +4,46 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
-<h:head>
-    <meta charset="utf-8"/>
-    <meta name="robots" content="all,follow"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>
-        <ui:insert name="title">Seeker | encuentra tus cosas</ui:insert>
-    </title>
-    <meta name="keywords" content=""/>
-    <h:outputStylesheet library="css" name="style.css"/>
-    <h:outputStylesheet library="css" name="style.default.css" id="theme-stylesheet"/>
-    <h:outputStylesheet library="css" name="bootstrap.min.css"/>
-    <h:outputStylesheet library="css" name="font-awesome.css"/>
-    <h:outputStylesheet library="css" name="custom.css"/>
-    <style type="text/css">
+    <h:head>
+        <meta charset="utf-8"/>
+        <meta name="robots" content="all,follow"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>
+            <ui:insert name="title">Seeker | encuentra tus cosas</ui:insert>
+        </title>
+        <meta name="keywords" content=""/>
+        <h:outputStylesheet library="css" name="style.css"/>
+        <h:outputStylesheet library="css" name="style.default.css" id="theme-stylesheet"/>
+        <h:outputStylesheet library="css" name="bootstrap.min.css"/>
+        <h:outputStylesheet library="css" name="font-awesome.css"/>
+        <h:outputStylesheet library="css" name="custom.css"/>
+        <style type="text/css">
             .ui-growl{
                 top:5em;
             }
         </style>
-</h:head>
-<h:body>
-    <p:growl id="growl" showDetail="true" sticky="true" />
-    
-    <ui:insert name="header" >
-        <ui:include src="/templates/common/header.xhtml" />
-    </ui:insert>
+    </h:head>
+    <h:body>
+        <p:growl id="growl" showDetail="true" sticky="true" />
 
-    <ui:insert name="content" >
-        <ui:include src="/templates/common/content.xhtml" />
-    </ui:insert>
+        <ui:insert name="header" >
+            <ui:include src="/templates/common/header.xhtml" />
+        </ui:insert>
 
-    <ui:insert name="footer" >
-        <ui:include src="/templates/common/footer.xhtml" />
-    </ui:insert>
+        <ui:insert name="content" >
+            <ui:include src="/templates/common/content.xhtml" />
+        </ui:insert>
 
-    <h:outputScript library="js" name="script.js"/>
-    <!-- #### JAVASCRIPT FILES ### -->
-    <h:outputScript library="js" name="jquery-1.11.0.min.js"/>
-    <h:outputScript library="js" name="bootstrap.min.jss"/>
-    <h:outputScript library="js" name="jquery.cookie.js"/>
-    <h:outputScript library="js" name="front.js"/>
-    <h:outputScript library="js" name="owl.carousel.min.js"/>
-</h:body>
+        <ui:insert name="footer" >
+            <ui:include src="/templates/common/footer.xhtml" />
+        </ui:insert>
+
+        <h:outputScript library="js" name="script.js"/>
+        <!-- #### JAVASCRIPT FILES ### -->
+        <h:outputScript library="js" name="jquery-1.11.0.min.js"/>
+        <h:outputScript library="js" name="bootstrap.min.jss"/>
+        <h:outputScript library="js" name="jquery.cookie.js"/>
+        <h:outputScript library="js" name="front.js"/>
+        <h:outputScript library="js" name="owl.carousel.min.js"/>
+    </h:body>
 </html>

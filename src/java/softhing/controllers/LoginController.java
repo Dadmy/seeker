@@ -58,6 +58,7 @@ public class LoginController implements Serializable {
                         Person u = UserDAO.consultarUsuarioPorMail(email);
 			HttpSession session = SessionUtils.getSession();
 			session.setAttribute("username", u.getUsername());
+                        session.setAttribute("email", u.getEmail());
                         
                         FacesContext.getCurrentInstance().addMessage(
 					null,

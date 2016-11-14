@@ -13,6 +13,8 @@ public class UserDAO {
 
         session.save(p);
 
+        u.setPerson(p);
+        
         session.save(u);
 
         session.getTransaction().commit();
@@ -37,5 +39,29 @@ public class UserDAO {
         session.close();
         return u;
     } 
+    
+    public static User consultarUsuario(Person p){
+        User u;
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        u = (User)session.createQuery(
+                "FROM User AS U WHERE U.person.email = '" + p.getEmail() + "'").uniqueResult();
+        
+        session.getTransaction().commit();
+        session.close();
+        return u;
+    }
+    
+    public static User consultarUsuarioPorNumeroCuenta(Integer numeroCuenta){
+        User u;
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        u = (User)session.createQuery(
+                "FROM User AS U WHERE U.accountNumber = " + numeroCuenta).uniqueResult();
+        
+        session.getTransaction().commit();
+        session.close();
+        return u;
+    }
     
 }
