@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
 <h:head>
     <meta charset="utf-8"/>
     <meta name="robots" content="all,follow"/>
@@ -16,8 +17,15 @@
     <h:outputStylesheet library="css" name="bootstrap.min.css"/>
     <h:outputStylesheet library="css" name="font-awesome.css"/>
     <h:outputStylesheet library="css" name="custom.css"/>
+    <style type="text/css">
+            .ui-growl{
+                top:5em;
+            }
+        </style>
 </h:head>
 <h:body>
+    <p:growl id="growl" showDetail="true" sticky="true" />
+    
     <ui:insert name="header" >
         <ui:include src="/templates/common/header.xhtml" />
     </ui:insert>

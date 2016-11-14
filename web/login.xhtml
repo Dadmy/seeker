@@ -80,14 +80,14 @@
                         <h:form>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="text" class="form-control" id="email"/>
+                                <h:inputText id="email" class="form-control" value="#{loginController.email}"/>
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password"/>
+                                <h:inputSecret id="password" class="form-control" value="#{loginController.password}"/>
                             </div>
                             <div class="text-center">
-                                <b:commandButton action="#{loginController.login()}" value="LogIn" look="success"></b:commandButton>
+                                <b:commandButton action="#{loginController.validateUsernamePassword()}" value="LogIn" look="success"></b:commandButton>
                             </div>
                         </h:form>
                         

@@ -12,10 +12,6 @@ import org.hibernate.Session;
 import softhing.model.ObjectLossed;
 import softhing.model.util.HibernateUtil;
 
-/**
- *
- * @author Armando
- */
 @ManagedBean
 @SessionScoped
 public class ObjectLostController {
@@ -26,6 +22,10 @@ public class ObjectLostController {
      * Creates a new instance of ObjectLostController
      */
     public ObjectLostController() {
+        inicializarLista();
+    }
+    
+    public void inicializarLista(){
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
         objetos = session.createQuery("from ObjectLossed").list();

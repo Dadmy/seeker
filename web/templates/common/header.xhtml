@@ -61,7 +61,7 @@
                 <b:commandButton action="objetoRegistrar.xhtml" value="Nuevo objeto" look="info" icon="chevron-right" iconAlign="left" />
             </h:form>
             <h:form styleClass="navbar-form navbar-left">
-                <b:commandButton action="login.xhtml" value="Accede" look="success" icon="chevron-right" iconAlign="left" />
+                <b:commandButton action="#{loginController.loginLogout()}" value="#{loginController.msg}" look="success" icon="chevron-right" iconAlign="left" />
             </h:form>
         </b:navBar>
     </header>

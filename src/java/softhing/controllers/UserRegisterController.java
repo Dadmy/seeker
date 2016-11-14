@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package softhing.controllers;
 
 import java.util.Date;
@@ -13,12 +8,9 @@ import javax.faces.context.FacesContext;
 import org.hibernate.Session;
 import softhing.model.Person;
 import softhing.model.User;
+import softhing.model.dao.UserDAO;
 import softhing.model.util.HibernateUtil;
 
-/**
- *
- * @author Armando
- */
 @ManagedBean
 @SessionScoped
 public class UserRegisterController {
@@ -74,12 +66,7 @@ public class UserRegisterController {
     }
 
     public void registrar() {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.beginTransaction();
-
         Person p = new Person(usuario, usuario, email, password, new Date(), new Date());
-
-        session.save(p);
 
         User u = new User();
         u.setFaculty(facultad);
@@ -87,12 +74,7 @@ public class UserRegisterController {
         u.setCreatedAt(new Date());
         u.setUpdatedAt(new Date());
 
-        u.setPerson(p);
-
-        session.save(u);
-
-        session.getTransaction().commit();
-        session.close();
+        UserDAO.insertarUsuario(p, u);
 
         FacesContext context = FacesContext.getCurrentInstance();
 
