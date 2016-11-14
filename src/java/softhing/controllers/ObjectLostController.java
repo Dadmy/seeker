@@ -11,9 +11,6 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.regex.Pattern;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -22,6 +19,7 @@ import org.hibernate.Session;
 import softhing.controllers.util.SessionUtils;
 import softhing.model.Form;
 import softhing.model.ObjectLossed;
+import softhing.model.ObjectLost;
 import softhing.model.User;
 import softhing.model.dao.ObjectLostDAO;
 import softhing.model.dao.UserDAO;
@@ -30,8 +28,8 @@ import softhing.model.util.HibernateUtil;
 @ManagedBean
 @SessionScoped
 public class ObjectLostController {
-    private List<ObjectLossed> objetos;
-    private ObjectLossed objetoSeleccionado;
+    private List<ObjectLost> objetos;
+    private ObjectLost objetoSeleccionado;
     
     /**
      * Creates a new instance of ObjectLostController
@@ -43,25 +41,25 @@ public class ObjectLostController {
     public void inicializarLista(){
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
-        objetos = session.createQuery("from ObjectLossed").list();
+        objetos = ObjectLost.listarObjetos(session.createQuery("from ObjectLossed AS O order by O.createdAt desc").list());
         
         session.getTransaction().commit();
         session.close();
     }
 
-    public List<ObjectLossed> getObjetos() {
+    public List<ObjectLost> getObjetos() {
         return objetos;
     }
 
-    public void setObjetos(List<ObjectLossed> objetos) {
+    public void setObjetos(List<ObjectLost> objetos) {
         this.objetos = objetos;
     }
 
-    public ObjectLossed getObjetoSeleccionado() {
+    public ObjectLost getObjetoSeleccionado() {
         return objetoSeleccionado;
     }
 
-    public void setObjetoSeleccionado(ObjectLossed objetoSeleccionado) {
+    public void setObjetoSeleccionado(ObjectLost objetoSeleccionado) {
         this.objetoSeleccionado = objetoSeleccionado;
     }
  
@@ -194,7 +192,7 @@ public class ObjectLostController {
         ObjectLossed o = new ObjectLossed();
         o.setCreatedAt(d);
         o.setUpdatedAt(d);
-        o.setName(nombre + "|" + descripcion + "|" + lugar);
+        o.setName(nombre + "@" + descripcion + "@" + lugar);
         o.setClass_(categoria);
         o.setSubclass(subcategoria);
         
