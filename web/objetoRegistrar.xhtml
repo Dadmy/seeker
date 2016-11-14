@@ -38,7 +38,7 @@
                         <form method="post" action="objetoRegistrar1.xhtml">
 
                             <ul class="nav nav-pills nav-justified">
-                                <li class="active"><a href="#"><i class="fa fa-map-marker"></i><br/>Datos de REgistro</a>
+                                <li class="active"><a href="#"><i class="fa fa-map-marker"></i><br/>Datos de Registro</a>
                                 </li>
                                 <li class="disabled"><a href="#"><i class="fa fa-truck"></i><br/>Formulario de reconocimiento</a>
                                 </li>
@@ -48,13 +48,13 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="firstname">Info</label>
+                                            <label for="firstname">Nombre del objeto</label>
                                             <input type="text" class="form-control" id="firstname"/>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="lastname">Info</label>
+                                            <label for="lastname">Pregunta 1</label>
                                             <input type="text" class="form-control" id="lastname"/>
                                         </div>
                                     </div>
@@ -64,44 +64,76 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="company">Info</label>
+                                            <label for="company">Breve descripcion</label>
                                             <input type="text" class="form-control" id="company"/>
                                         </div>
                                     </div>
+                                    
+                                    
+                                    
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="street">Info</label>
+                                            <label for="street">Pregunta 2</label>
                                             <input type="text" class="form-control" id="street"/>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- /.row -->
-
-                                <div class="row">
-                                    <div class="col-sm-6 col-md-3">
+                                
+                               <!-- <div class="col-sm-6 col-md-3"> -->
+                                <div class="col-sm-6 col-md-3">
                                         <div class="form-group">
-                                            <label for="city">Info</label>
-                                            <input type="text" class="form-control" id="city"/>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-3">
-                                        <div class="form-group">
-                                            <label for="zip">Info</label>
-                                            <input type="text" class="form-control" id="zip"/>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-3">
-                                        <div class="form-group">
-                                            <label for="state">Info</label>
+                                            <label for="state">Categoria</label>
                                             <select class="form-control" id="state">
-                                                <option>Info</option>
-                                                <option>Info</option>
-                                                <option>Info</option>
-                                                <option>Info</option>
-                                                <option>Info</option>
+                                                <option>Electronicos</option>
+                                                <option>Deportivos</option>
+                                                <option>Escolares</option>
+                                                <option>Personales</option>
                                             </select>
                                         </div>
                                     </div>
+                                    <div class="col-sm-6 col-md-3">
+                                        <div class="form-group">
+                                            <label for="state">Subcategoria</label>
+                                            <select class="form-control" id="state">
+                                                <option>Accesorios electronicos</option>
+                                                <option>Ropa</option>
+                                                <option>Accesorios personales</option>
+                                                <option>Accesorios deportivos</option>
+                                                <option>Accesorios escolares</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="company">Pregunta 3</label>
+                                            <input type="text" class="form-control" id="company"/>
+                                        </div>
+                                    </div>
+                                        
+                                        
+                                   <!-- 
+                                
+                                   <div class="col-sm-6 col-md-3">
+                                        <div class="form-group">
+                                            <label for="city">Detalles adicionales</label>
+                                            <input type="text" class="form-control" id="city"/>
+                                        </div>
+                                    </div> -->
+                                <!-- /.categ y sub -->
+                                    
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="zip">Pregunta 4</label>
+                                            <input type="text" class="form-control" id="zip"/>
+                                        </div>
+                                    </div>
+                                
+                                    
+                                <!--
                                     <div class="col-sm-6 col-md-3">
                                         <div class="form-group">
                                             <label for="country">Info</label>
@@ -113,16 +145,23 @@
                                             </select>
                                         </div>
                                     </div>
+                                -->
 
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="phone">Info</label>
+                                            <label for="phone">Fecha</label>
                                             <input type="text" class="form-control" id="phone"/>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="email">Info</label>
+                                            <label for="email">Pregunta 5</label>
+                                            <input type="text" class="form-control" id="email"/>
+                                        </div>
+                                    </div>
+                                <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="email">Lugar</label>
                                             <input type="text" class="form-control" id="email"/>
                                         </div>
                                     </div>
