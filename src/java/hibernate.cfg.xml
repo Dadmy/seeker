@@ -60,9 +60,5 @@ Contributor(s):
     <mapping class="softhing.model.TagClass"/>
     <mapping class="softhing.model.Twitter"/>
     <mapping class="softhing.model.User"/>
-    <mapping class="softhing.model.util.HibernateUtil"/>
-    <mapping class="softhing.model.controllers.UserRegisterController"/>
-    <mapping class="softhing.model.dao.UserDao"/>
-    <mapping class="softhing.model.dao.Dao"/>
   </session-factory>
 </hibernate-configuration>

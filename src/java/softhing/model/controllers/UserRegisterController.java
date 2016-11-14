@@ -22,16 +22,17 @@ import softhing.model.util.HibernateUtil;
 @ManagedBean
 @SessionScoped
 public class UserRegisterController {
+
     private String usuario;
     private String email;
     private String facultad;
     private String password;
     private String numeroCuenta;
-    
+
     public UserRegisterController() {
-       
+        
     }
-    
+
     public String getEmail() {
         return email;
     }
@@ -47,7 +48,7 @@ public class UserRegisterController {
     public void setNumeroCuenta(String numeroCuenta) {
         this.numeroCuenta = numeroCuenta;
     }
-    
+
     public String getFacultad() {
         return facultad;
     }
@@ -71,32 +72,32 @@ public class UserRegisterController {
     public void setPassword(String password) {
         this.password = password;
     }
-    
-    public void registrar(){
+
+    public void registrar() {
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
-        
+
         Person p = new Person(usuario, usuario, email, password, new Date(), new Date());
-        
-        session.save( p );
-        
+
+        session.save(p);
+
         User u = new User();
         u.setFaculty(facultad);
-        u.setAccountNumber(Integer.parseInt(numeroCuenta) );
+        u.setAccountNumber(Integer.parseInt(numeroCuenta));
         u.setCreatedAt(new Date());
         u.setUpdatedAt(new Date());
-        
+
         u.setPerson(p);
-        
-        session.save( u );
-        
+
+        session.save(u);
+
         session.getTransaction().commit();
         session.close();
-                
+
         FacesContext context = FacesContext.getCurrentInstance();
-         
-        context.addMessage(null, new FacesMessage("Usuario agregado!",  "") );
-        
+
+        context.addMessage(null, new FacesMessage("Usuario agregado!", ""));
+
         email = numeroCuenta = password = usuario = "";
         facultad = "Facultad de Arquitectura";
     }
