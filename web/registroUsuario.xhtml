@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<ui:composition template="/templates/layout/main-layout.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <ui:define name="title">Login</ui:define>
+
+    <ui:define name="content">
+        <div id="all">
+
+            <div id="content">
+                <div class="container">
+
+                    <div class="col-md-12">
+                        <ul class="breadcrumb">
+
+                            <li><a href="index.html">Home</a>
+                            </li>
+                            <li>New account / Sign in</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="box">
+
+
+                            <p class="lead">Llena lo siguiente</p>
+
+
+
+
+                            <h:form ><!--action="#" method="post">-->
+                                <p:growl id="growl" showDetail="true" sticky="true" />
+                                
+                                <div class="row">
+                                    <div class="col-sm-10 col-sm-offset-1">
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="numeroCuenta">Número de cuenta</label>
+                                                <h:inputText value="#{userRegisterController.numeroCuenta}" class="form-control" id="numeroCuenta" />
+                                                <!--input type="text" class="form-control" id="numCuenta"/-->
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="facultad">Facultad</label>
+                                                <!--  -->
+                                                <h:selectOneMenu class="form-control" value="#{userRegisterController.facultad}">
+                                                    <f:selectItem itemValue="Facultad de Arquitectura" itemLabel="Facultad de Arquitectura" />
+                                                    <f:selectItem itemValue="Facultad de Artes y Diseño" itemLabel="Facultad de Artes y Diseño" />
+                                                    <f:selectItem itemValue="Facultad de Ciencias" itemLabel="Facultad de Ciencias" />
+                                                    <f:selectItem itemValue="Facultad de Ciencias Políticas y Sociales" itemLabel="Facultad de Ciencias Políticas y Sociales" />
+                                                    <f:selectItem itemValue="Facultad de Contaduría y Administración" itemLabel="Facultad de Contaduría y Administración" />	
+                                                    <f:selectItem itemValue="Facultad de Derecho" itemLabel="Facultad de Derecho" />
+                                                    <f:selectItem itemValue="Facultad de Economía" itemLabel="Facultad de Economía" />
+                                                    <f:selectItem itemValue="Facultad de Filisifía y Letras" itemLabel="Facultad de Filisifía y Letras" />
+                                                    <f:selectItem itemValue="Facultad de Ingeniería" itemLabel="Facultad de Ingeniería" />
+                                                    <f:selectItem itemValue="Facultad de Medicina" itemLabel="Facultad de Medicina" />	
+                                                    <f:selectItem itemValue="Facultad de Medicina Veterinaria y Zootecnia" itemLabel="Facultad de Medicina Veterinaria y Zootecnia" />
+                                                    <f:selectItem itemValue="Facultad de Música" itemLabel="Facultad de Música" />
+                                                    <f:selectItem itemValue="Facultad de Odontología" itemLabel="Facultad de Odontología" />
+                                                    <f:selectItem itemValue="Facultad de Psicología" itemLabel="Facultad de Psicología" />
+                                                    <f:selectItem itemValue="Facultad de Química" itemLabel="Facultad de Química" />
+                                                    <f:selectItem itemValue="Escuela Nacional de Trabajo Social" itemLabel="Escuela Nacional de Trabajo Social" />
+                                                </h:selectOneMenu>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <h:commandButton class="btn btn-primary" value="Submit" action="#{userRegisterController.registrar()}"/>
+                                            <!--<button type="submit" class="btn btn-primary"> Registrar</button>-->
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </h:form>
+                            <h:outputText value="#{userRegisterController.salida}" />
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /#content -->
+
+
+    </ui:define>
+
+</ui:composition>
+
+
+

@@ -1,0 +1,125 @@
+<ui:composition template="/templates/layout/main-layout.xhtml"
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:p="http://primefaces.org/ui"
+        xmlns:b="http://bootsfaces.net/ui"
+        xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <ui:define name="title">Login</ui:define>
+
+    <ui:define name="content">
+        <div id="all">
+
+        <div id="content">
+            <div class="container">
+
+                <div class="col-md-12">
+                    <ul class="breadcrumb">
+
+                        <li><a href="index.html">Home</a>
+                        </li>
+                        <li>New account / Sign in</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="box">
+                        <h1>Crea una cuenta</h1>
+
+                        <p class="lead">Aún no estás registrado</p>
+                        
+                        
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary"> Regístrate con Facebook</button>
+                            </div>
+                        
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary"> Twitter</button>
+                            </div>
+                        
+                        <p class="text-center"> o </p>
+                        <p class="text-center">Regístrate con tu Email</p>
+
+                        <hr/>
+
+                        <h:form>
+                            <div class="form-group">
+                                <label for="name">Nombre de usuario</label>
+                                <h:inputText value="#{userRegisterController.usuario}" class="form-control"  />
+                                <!--<input type="text" class="form-control" id="name"/>-->
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <h:inputText value="#{userRegisterController.email}" class="form-control" />
+                                <!--<input type="text" class="form-control" id="email"/>-->
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <h:inputSecret value="#{userRegisterController.password}" class="form-control" />
+                                <!--<input type="password" class="form-control" id="password"/>-->
+                            </div>
+                            <div class="text-center">
+                                <h:commandButton class="btn btn-primary" value="Registrar" action="registroUsuario"/>
+                                <!--<button type="submit" class="btn btn-primary"> Registrar</button>-->
+                            </div>
+                        </h:form>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="box">
+                        <h1>Login</h1>
+
+                        <p class="lead">Ya registrado</p>
+                        <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies
+                            mi vitae est. Mauris placerat eleifend leo.</p>
+
+                        <hr/>
+
+                        <h:form>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="text" class="form-control" id="email"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password"/>
+                            </div>
+                            <div class="text-center">
+                                <b:commandButton action="#{loginController.login()}" value="LogIn" look="success"></b:commandButton>
+                            </div>
+                        </h:form>
+                        
+                        
+                    </div>
+                    </div>
+                
+                
+                <div class="col-md-6">
+                    <div class="box">
+                        <h1>Login</h1>
+
+                        <p class="lead">Ya registrado</p>
+                        <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies
+                            mi vitae est. Mauris placerat eleifend leo.</p>
+                        
+                        <h:form styleClass="navbar-form navbar-left">
+                            <b:commandButton action="login.xhtml" value=" Twitter" look="success" iconAlign="left" class="fa fa-twitter" />
+                        </h:form>
+                        <h:form styleClass="navbar-form navbar-left">
+                            <b:commandButton action="login.xhtml" value=" Facebook" look="success" iconAlign="left" class="fa fa-facebook"></b:commandButton>
+                        </h:form>
+                    </div>               
+                </div>
+
+
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /#content -->
+
+    </div>
+    </ui:define>
+
+</ui:composition>

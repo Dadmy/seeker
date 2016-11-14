@@ -1,0 +1,305 @@
+<ui:composition template="/templates/layout/main-layout.xhtml"
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:p="http://primefaces.org/ui"
+        xmlns:b="http://bootsfaces.net/ui"
+        xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <ui:define name="title">Inicio</ui:define>
+
+    <ui:define name="content">
+    <div id="all">
+
+        <!-- *** ADVANTAGES ***
+_________________________________________________________ -->
+
+        <div id="advantages">
+
+            <div class="container">
+
+                <div class="col-md-12">
+
+                    <div class="box text-center">
+                        <h3 class="text-uppercase">Acerca de Seeker</h3>
+
+                        <p><strong>Seeker</strong> tiene como metas:</p>
+
+
+
+                        <div class="same-height-row row">
+                            <div class="col-sm-3">
+                                <div class="box same-height clickable no-border text-center-xs text-center-sm">
+                                    <div class="icon"><i class="fa fa-heart-o"></i>
+                                    </div>
+                                    <h4><a href="text.html">Mantener los lazos entre tu y tus pertenencias.</a></h4>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="box same-height clickable no-border text-center-xs text-center-sm">
+                                    <div class="icon"><i class="fa fa-comments-o"></i>
+                                    </div>
+                                    <h4><a href="text.html">Un lugar tranquilo y seguro para buscar tus </a></h4>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="box same-height clickable no-border text-center-xs text-center-sm">
+                                    <div class="icon"><i class="fa fa-send-o"></i>
+                                    </div>
+                                    <h4><a href="faq.html">Una manera facil, rapida y segura de recuperar tus objetos o regresarlos, segun sea su cituacion</a></h4>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="box same-height clickable no-border text-center-xs text-center-sm">
+                                    <div class="icon"><i class="fa fa-refresh"></i>
+                                    </div>
+                                    <h4><a href="contact.html">Recordar que al ayudar a alguien el favor se regresa</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.row -->
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!-- /.container -->
+
+        </div>
+        <!-- /#advantages -->
+
+        <!-- *** ADVANTAGES END *** -->
+        <h:form styleClass="navbar-form navbar-left">
+            <div class="form-group">
+                <b:inputText placeholder="Dia" field-size="md" col-lg="two-thirds" name="dia" id="dia" />
+                <b:inputText placeholder="Mes" field-size="md" col-lg="two-thirds" name="mes" id="mes" />
+                <b:inputText placeholder="Año" field-size="md" col-lg="two-thirds" name="ano" id="ano" />
+            </div> 
+            #{' '}
+            <b:commandButton action="a" value="Burcar" look="success" icon="chevron-right" iconAlign="right"/>
+        </h:form>
+        <!-- *** CONTENT ***
+	    _________________________________________________________
+	    _________________________________________________________
+	    -->
+
+        <div id="content">
+            <div class="container">
+
+                <div class="col-sm-12">
+
+                    <div class="box text-center">
+                        <h3 class="text-uppercase">Nuevos objetos encontrados</h3>
+                    </div>
+
+                    <div class="row products">
+
+                        <div class="col-md-3 col-sm-4">
+                            <div class="product">
+                                <div class="image">
+                                    <a href="objetoDetail.xhtml">
+                                        <h:graphicImage url="https://imgs-steps-dragoart-386112.c.cdn77.org/how-to-draw-clothes-for-kids-step-4_1_000000071249_5.jpg" height="100%" width="100%"/>
+                                    </a>
+                                </div>
+                                <!-- /.image -->
+                                <div class="text">
+                                    <h3><a href="objetoDetail.xhtml">Fur coat with very but very very long name</a></h3>
+                                    <p class="fecha">25/03/2016</p>
+                                </div>
+                                <!-- /.text -->
+                            </div>
+                            <!-- /.product -->
+                        </div>
+
+                        <div class="col-md-3 col-sm-4">
+                            <div class="product">
+                                <div class="image">
+                                    <a href="objetoDetail.xhtml">
+                                        <h:graphicImage url="https://imgs-steps-dragoart-386112.c.cdn77.org/how-to-draw-clothes-for-kids-step-4_1_000000071249_5.jpg" height="100%" width="100%"/>
+                                    </a>
+                                </div>
+                                <!-- /.image -->
+                                <div class="text">
+                                    <h3><a href="objetoDetail.xhtml">White Blouse Armani</a></h3>
+                                    <p class="fecha">25/03/2016</p>
+                                </div>
+                                <!-- /.text -->
+
+                                <div class="ribbon sale">
+                                    <div class="theribbon">!!!!</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                                <!-- /.ribbon -->
+
+                                <div class="ribbon new">
+                                    <div class="theribbon">Nuevo</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                                <!-- /.ribbon -->
+                            </div>
+                            <!-- /.product -->
+                        </div>
+
+                        <div class="col-md-3 col-sm-4">
+                            <div class="product">
+                                <div class="image">
+                                    <a href="objetoDetail.xhtml">
+                                        <h:graphicImage url="https://imgs-steps-dragoart-386112.c.cdn77.org/how-to-draw-clothes-for-kids-step-4_1_000000071249_5.jpg" height="100%" width="100%"/>
+                                    </a>
+                                </div>
+                                <!-- /.image -->
+                                <div class="text">
+                                    <h3><a href="objetoDetail.xhtml">White Blouse Armani</a></h3>
+                                    <p class="fecha">25/03/2016</p>
+                                </div>
+                                <!-- /.text -->
+
+                                <div class="ribbon sale">
+                                    <div class="theribbon">!!!!</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                                <!-- /.ribbon -->
+
+                                <div class="ribbon new">
+                                    <div class="theribbon">Nuevo</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                                <!-- /.ribbon -->
+                            </div>
+                            <!-- /.product -->
+                        </div>
+                        
+                        <div class="col-md-3 col-sm-4">
+                            <div class="product">
+                                <div class="image">
+                                    <a href="objetoDetail.xhtml">
+                                        <h:graphicImage url="https://imgs-steps-dragoart-386112.c.cdn77.org/how-to-draw-clothes-for-kids-step-4_1_000000071249_5.jpg" height="100%" width="100%"/>
+                                    </a>
+                                </div>
+                                <!-- /.image -->
+                                <div class="text">
+                                    <h3><a href="objetoDetail.xhtml">White Blouse Armani</a></h3>
+                                    <p class="fecha">25/03/2016</p>
+                                </div>
+                                <!-- /.text -->
+
+                                <div class="ribbon sale">
+                                    <div class="theribbon">!!!!</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                                <!-- /.ribbon -->
+
+                                <div class="ribbon new">
+                                    <div class="theribbon">Nuevo</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                                <!-- /.ribbon -->
+                            </div>
+                            <!-- /.product -->
+                        </div>
+                        
+                        <div class="col-md-3 col-sm-4">
+                            <div class="product">
+                                <div class="image">
+                                    <a href="objetoDetail.xhtml">
+                                        <h:graphicImage url="https://imgs-steps-dragoart-386112.c.cdn77.org/how-to-draw-clothes-for-kids-step-4_1_000000071249_5.jpg" height="100%" width="100%"/>
+                                    </a>
+                                </div>
+                                <!-- /.image -->
+                                <div class="text">
+                                    <h3><a href="objetoDetail.xhtml">White Blouse Armani</a></h3>
+                                    <p class="fecha">25/03/2016</p>
+                                </div>
+                                <!-- /.text -->
+
+                                <div class="ribbon sale">
+                                    <div class="theribbon">!!!!</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                                <!-- /.ribbon -->
+
+                                <div class="ribbon new">
+                                    <div class="theribbon">Nuevo</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                                <!-- /.ribbon -->
+                            </div>
+                            <!-- /.product -->
+                        </div>
+                        
+                        <div class="col-md-3 col-sm-4">
+                            <div class="product">
+                                <div class="image">
+                                    <a href="objetoDetail.xhtml">
+                                        <h:graphicImage url="https://imgs-steps-dragoart-386112.c.cdn77.org/how-to-draw-clothes-for-kids-step-4_1_000000071249_5.jpg" height="100%" width="100%"/>
+                                    </a>
+                                </div>
+                                <!-- /.image -->
+                                <div class="text">
+                                    <h3><a href="objetoDetail.xhtml">White Blouse Armani</a></h3>
+                                    <p class="fecha">25/03/2016</p>
+                                </div>
+                                <!-- /.text -->
+
+                                <div class="ribbon sale">
+                                    <div class="theribbon">!!!!</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                                <!-- /.ribbon -->
+
+                                <div class="ribbon new">
+                                    <div class="theribbon">Nuevo</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                                <!-- /.ribbon -->
+                            </div>
+                            <!-- /.product -->
+                        </div>
+                        
+                        <div class="col-md-3 col-sm-4">
+                            <div class="product">
+                                <div class="image">
+                                    <a href="objetoDetail.xhtml">
+                                        <h:graphicImage url="https://imgs-steps-dragoart-386112.c.cdn77.org/how-to-draw-clothes-for-kids-step-4_1_000000071249_5.jpg" height="100%" width="100%"/>
+                                    </a>
+                                </div>
+                                <!-- /.image -->
+                                <div class="text">
+                                    <h3><a href="objetoDetail.xhtml">White Blouse Armani</a></h3>
+                                    <p class="fecha">25/03/2016</p>
+                                </div>
+                                <!-- /.text -->
+
+                                <div class="ribbon sale">
+                                    <div class="theribbon">!!!!</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                                <!-- /.ribbon -->
+
+                                <div class="ribbon new">
+                                    <div class="theribbon">Nuevo</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                                <!-- /.ribbon -->
+                            </div>
+                            <!-- /.product -->
+                        </div>
+                    </div>
+                    <!-- /.products -->
+
+                </div>
+                <!-- /.col-sm-12 -->
+
+            </div>
+            <!-- /.container -->
+        </div>
+    </div>
+        
+    </ui:define>
+
+</ui:composition>

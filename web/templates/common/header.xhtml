@@ -1,0 +1,69 @@
+<ui:composition
+        xmlns="http://www.w3.org/1999/xhtml"
+      	xmlns:ui="http://java.sun.com/jsf/facelets"
+      	xmlns:f="http://java.sun.com/jsf/core"
+      	xmlns:h="http://java.sun.com/jsf/html"
+      	xmlns:p="http://primefaces.org/ui"
+      	xmlns:pe="http://primefaces.org/ui/extensions"
+        xmlns:b="http://bootsfaces.net/ui">
+
+    <header>
+        <b:navBar brand="Seeker" brandHref="index.xhtml" inverse="true" fixed="top">
+            <b:navbarLinks>
+                <b:dropMenu value="Electronicos">
+                    <b:navLink value="Laptos" href="#"></b:navLink>
+                    <b:navLink value="Celulares" href="#"></b:navLink>
+                    <b:navLink value="Consolas portatiles" href="#"></b:navLink>
+                    <b:navLink value="Reproductores" href="#"></b:navLink>
+                    <b:navLink></b:navLink>
+                    <b:navLink header="Accesorios"></b:navLink>
+                    <b:navLink value="Audifonos" href="#"></b:navLink>
+                    <b:navLink value="USBs" href="#"></b:navLink>
+                    <b:navLink value="Fundas" href="#"></b:navLink>
+                    <b:navLink value="Cargadores" href="#"></b:navLink>
+                </b:dropMenu>
+                
+                <b:dropMenu value="Personales">
+                    <b:navLink header="Ropa"></b:navLink>
+                    <b:navLink value="Chamarras" href="#"></b:navLink>
+                    <b:navLink value="Zapatos" href="#"></b:navLink>
+                    <b:navLink value="Abrigos" href="#"></b:navLink>
+                    <b:navLink value="Sacos" href="#"></b:navLink>
+                    <b:navLink></b:navLink>
+                    <b:navLink header="Accesorios"></b:navLink>
+                    <b:navLink value="Bufandas" href="#"></b:navLink>
+                    <b:navLink value="Joyeria" href="#"></b:navLink>
+                    <b:navLink value="Relojes" href="#"></b:navLink>
+                </b:dropMenu>
+                
+                <b:dropMenu value="Deportivos">
+                    <b:navLink value="Ropa deportiva" href="#"></b:navLink>
+                    <b:navLink value="Raquetas" href="#"></b:navLink>
+                    <b:navLink value="Balones y Pelotas" href="#"></b:navLink>
+                    <b:navLink value="Bolsas" href="#"></b:navLink>
+                    <b:navLink></b:navLink>
+                    <b:navLink header="Accesorios"></b:navLink>
+                    <b:navLink value="Otros" href="#"></b:navLink>
+                </b:dropMenu>
+                
+                <b:dropMenu value="Escolares">
+                    <b:navLink value="Mochilas" href="#"></b:navLink>
+                    <b:navLink value="Libros" href="#"></b:navLink>
+                    <b:navLink value="Cuadernos" href="#"></b:navLink>
+                    <b:navLink value="Plumas" href="#"></b:navLink>
+                    <b:navLink></b:navLink>
+                    <b:navLink header="Accesorios"></b:navLink>
+                    <b:navLink value="Apuntadores" href="#"></b:navLink>
+                    <b:navLink value="Otros" href="#"></b:navLink>
+                </b:dropMenu>
+            </b:navbarLinks>
+            <h:form styleClass="navbar-form navbar-left">
+                <b:commandButton action="objetoRegistrar.xhtml" value="Nuevo objeto" look="info" icon="chevron-right" iconAlign="left" />
+            </h:form>
+            <h:form styleClass="navbar-form navbar-left">
+                <b:commandButton action="login.xhtml" value="Accede" look="success" icon="chevron-right" iconAlign="left" />
+            </h:form>
+        </b:navBar>
+    </header>
+
+</ui:composition>

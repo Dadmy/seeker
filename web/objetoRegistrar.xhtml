@@ -1,0 +1,160 @@
+<ui:composition template="/templates/layout/main-layout.xhtml"
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:p="http://primefaces.org/ui"
+        xmlns:b="http://bootsfaces.net/ui"
+        xmlns:ui="http://java.sun.com/jsf/facelets">
+    
+    <ui:define name="title">Blank</ui:define>
+
+    <ui:define name="content">
+<div id="all">
+
+        <div id="content">
+            <div class="container">
+
+                <div class="col-md-12 clearfix">
+                    <ul class="breadcrumb">
+                        <li><a href="index.html">Home</a>
+                        </li>
+                        <li>Registro</li>
+                    </ul>
+
+                    <div class="box text-center">
+
+                        <div class="row">
+                            <div class="col-sm-10 col-sm-offset-1">
+                                <h1>Registro - Datos</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-12 clearfix" id="checkout">
+
+                    <div class="box">
+                        <form method="post" action="objetoRegistrar1.xhtml">
+
+                            <ul class="nav nav-pills nav-justified">
+                                <li class="active"><a href="#"><i class="fa fa-map-marker"></i><br/>Datos de REgistro</a>
+                                </li>
+                                <li class="disabled"><a href="#"><i class="fa fa-truck"></i><br/>Formulario de reconocimiento</a>
+                                </li>
+                            </ul>
+
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="firstname">Info</label>
+                                            <input type="text" class="form-control" id="firstname"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="lastname">Info</label>
+                                            <input type="text" class="form-control" id="lastname"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="company">Info</label>
+                                            <input type="text" class="form-control" id="company"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="street">Info</label>
+                                            <input type="text" class="form-control" id="street"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-3">
+                                        <div class="form-group">
+                                            <label for="city">Info</label>
+                                            <input type="text" class="form-control" id="city"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-3">
+                                        <div class="form-group">
+                                            <label for="zip">Info</label>
+                                            <input type="text" class="form-control" id="zip"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-3">
+                                        <div class="form-group">
+                                            <label for="state">Info</label>
+                                            <select class="form-control" id="state">
+                                                <option>Info</option>
+                                                <option>Info</option>
+                                                <option>Info</option>
+                                                <option>Info</option>
+                                                <option>Info</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-3">
+                                        <div class="form-group">
+                                            <label for="country">Info</label>
+                                            <select class="form-control" id="country">
+                                                <option>Info</option>
+                                                <option>Info</option>
+                                                <option>Info</option>
+                                                <option>Info</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="phone">Info</label>
+                                            <input type="text" class="form-control" id="phone"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="email">Info</label>
+                                            <input type="text" class="form-control" id="email"/>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /.row -->
+                            </div>
+
+                            <div class="box-footer">
+                                <div class="pull-left">
+                                    <a href="objetoDetail.xhtml" class="btn btn-default"><i class="fa fa-chevron-left"></i>Inicio</a>
+                                </div>
+                                <div class="pull-right">
+                                    <button type="submit" class="btn btn-primary">Continuar con el formulario<i class="fa fa-chevron-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.box -->
+
+
+                </div>
+                <!-- /.col-md-9 -->
+
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /#content -->
+
+    </div>
+    <!-- /#all -->
+    </ui:define>
+
+</ui:composition>
