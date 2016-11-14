@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package softhing.model.dao;
 
 import java.util.Date;
@@ -14,10 +9,6 @@ import softhing.model.Publish;
 import softhing.model.User;
 import softhing.model.util.HibernateUtil;
 
-/**
- *
- * @author Armando
- */
 public class ObjectLostDAO {
     public static void registrarObjeto(User usuario, ObjectLossed objeto, Set<Form> preguntas){
         Publish publish = new Publish(new Date(), new Date());

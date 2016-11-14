@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package softhing.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Armando
- */
 public class ObjectLost extends ObjectLossed {
     private String lugar;
     private String descripcion;
@@ -48,9 +39,6 @@ public class ObjectLost extends ObjectLossed {
             obj.setLugar(datos[2]);
             
             objs.add(obj);
-            System.out.println(objeto.getName());
-            System.out.println(obj.getLugar());
-            System.out.println(obj.getName());
         }
         
         return objs;

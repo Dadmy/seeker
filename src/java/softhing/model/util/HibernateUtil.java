@@ -3,12 +3,6 @@ package softhing.model.util;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-/**
- * Hibernate Utility class with a convenient method to get Session Factory
- * object.
- *
- * @author Armando
- */
 public class HibernateUtil {
 
     private static final SessionFactory sessionFactory;
