@@ -5,9 +5,7 @@
  */
 package softhing.model.controllers;
 
-import antlr.debug.Event;
 import java.util.Date;
-import java.util.List;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -27,10 +25,11 @@ public class UserRegisterController {
     private String usuario;
     private String email;
     private String facultad;
-    private String salida;
+    private String password;
+    private String numeroCuenta;
     
     public UserRegisterController() {
-       this.salida = "HOLA";
+       
     }
     
     public String getEmail() {
@@ -40,8 +39,6 @@ public class UserRegisterController {
     public void setEmail(String email) {
         this.email = email;
     }
-    private String password;
-    private String numeroCuenta;
 
     public String getNumeroCuenta() {
         return numeroCuenta;
@@ -58,15 +55,6 @@ public class UserRegisterController {
     public void setFacultad(String facultad) {
         this.facultad = facultad;
     }
-
-    public String getSalida() {
-        return salida;
-    }
-
-    public void setSalida(String salida) {
-        this.salida = salida;
-    }
-    
 
     public String getUsuario() {
         return usuario;
