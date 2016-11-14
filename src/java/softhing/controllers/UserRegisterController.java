@@ -5,11 +5,9 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
-import org.hibernate.Session;
 import softhing.model.Person;
 import softhing.model.User;
 import softhing.model.dao.UserDAO;
-import softhing.model.util.HibernateUtil;
 
 @ManagedBean
 @SessionScoped

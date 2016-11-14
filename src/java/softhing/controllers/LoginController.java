@@ -82,7 +82,7 @@ public class LoginController implements Serializable {
 	public String logout() {
 		HttpSession session = SessionUtils.getSession();
 		session.invalidate();
-		return "login";
+		return "index";
 	}
         
         public String loginLogout() {
